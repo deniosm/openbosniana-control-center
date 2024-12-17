@@ -1,0 +1,15 @@
+[Desktop Entry]
+Categories=Qt;KDE;Settings;
+Exec=/usr/bin/ob-control-center
+GenericName=OpenBosniana Control Center
+Icon=ob-cc
+Name=OpenBosniana Control Center
+StartupNotify=true
+Terminal=false
+Type=Application
+X-KDE-HasTempFileOption=true
+X-KDE-StartupNotify=true
+X-KDE-SubstituteUID=false
+Name[hr_HR]=OpenBosniana Control Center
+Name[bs]=OpenBosniana Control Center
+Name[sr]=OpenBosniana Control Center

@@ -1,0 +1,13 @@
+ #!/bin/bash
+
+if systemctl status bluetooth &>/dev/null; then
+	kdialog --title $"OpenBosniana" --msgbox $"bluetooth service is already running"
+else
+	if pkexec sh -c "/sbin/systemctl start bluetooth; /sbin/systemctl enable bluetooth"; then
+		kdialog --title $"OpenBosniana"  --msgbox  $" bluetooth service is enabled"
+	else
+		kdialog --title $"OpenBosniana"  --msgbox  $"Enabling bluetooth service failed"
+	fi
+fi
+
+kcmshell5 kcm_bluetooth

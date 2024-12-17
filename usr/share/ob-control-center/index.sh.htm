@@ -1,0 +1,186 @@
+#!/bin/bash
+source translation
+source ~/.ob-control-center
+source /etc/os-release
+GLOBALS_FILE=~/.config/kdedefaults/kdeglobals
+
+CSS_FILE="css/style.css"
+
+if [[ -f "$GLOBALS_FILE" ]]; then
+    COLOR_SCHEME=$(grep -E "^ColorScheme=" "$GLOBALS_FILE" | cut -d '=' -f 2)
+
+    if [[ "$COLOR_SCHEME" == "BreezeDark" ]]; then
+        CSS_FILE="css/dark.css"
+    fi
+fi
+
+#Translation
+export TEXTDOMAINDIR="/usr/share/locale"
+export TEXTDOMAIN=ob-control-center
+
+cat << EOF
+<html>
+
+	<head>
+		<title>$title</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+            <link rel="stylesheet" href="$CSS_FILE" />
+
+	</head>
+<body>
+EOF
+cat << EOF
+<div class="left">
+	<nav id="nav">
+		<ul class="container">
+			<li><a href="##">$title</a></li>
+            <div class="menulinija"></div>
+			<li><a href=./apps/aboutsys.run>$aboutsys</a></li>
+			<li><a href=./apps/cpu.run>$cpuinfo</a></li>
+			<li><a href=./apps/pci.run>$pciinfo</a></li>
+			<li><a href=./apps/devinfo.run>$devinfo</a></li>
+            <div class="menulinija"></div>
+			<li><a href="about.sh.htm">$descabout</a></li>
+		</ul>
+	</nav>
+</div>
+<div class="right">
+		<div class='cssmenu'>
+
+            <p class="titlePage">$titlepage04</p><div class="linija"></div>
+
+		</div>
+
+		<!--FINE SUBMENU-->
+		<ul id="item-list">
+			<li>
+				<p><a class="title" target="hidden" href=./apps/updatesys.run><img src="images/system-update.svg" class="alignleft"/></a>
+				<span><a class="title" target="hidden" href=./apps/updatesys.run>$titleupdatesys</a></span></p>
+			</li>
+			<li>
+				<p><a href=./apps/ob-update-config.run><img src="images/update-config.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/ob-update-config.run>$updatesettigs</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/drakuser.run><img src="images/users.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/drakuser.run>$titledrakuser</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-clock.run><img src="images/clock.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-clock.run>$titledrakclock</a></span></p>
+			</li>
+			<li>
+				<p><a target="hidden" href=./apps/start-drakconnect.run><img src="images/network.svg" class="alignleft"/></a>
+				<span><a class="title" target="hidden" href="./apps/start-drakconnect.run">$titleconfiglan </a></span> </p>
+		    </li>
+			<li>
+				<p><a class="title" href=./apps/kbackup.run><img src="images/system-backup.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/kbackup.run>$titlekbackup</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/language.run><img src="images/language.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/language.run>$titlelanguage</a></span></p>
+			</li>
+		</ul>
+
+
+
+		<div class='cssmenu'>
+
+            <p class="titlePage">$titlepage05</p><div class="linija"></div>
+
+
+
+		</div>
+		<!--FINE SUBMENU-->
+
+		<ul id="item-list">
+			<li>
+				<p><a class="title" href=./apps/start-xfdrake.run><img src="images/monitor.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-xfdrake.run>$titlexfdrake</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-printmanager.run><img src="images/printer.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-printmanager.run>$titleconfigprint</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/bluetooth.run><img src="images/bluetooth.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/bluetooth.run>$titlebluetooth</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-audio.run><img src="images/sound.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-audio.run>$titleaudio</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-keyboard.run><img src="images/keyboard.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-keyboard.run>$titlekeyboard</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-touchpad.run><img src="images/touchpad.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-touchpad.run>$titletouchpad</a></span></p>
+			</li>
+			<li>
+				<p><a href=./apps/diskdrake.run><img src="images/drive-partition.svg" class="alignleft"/></a>
+				<span><a class="title" href="./apps/diskdrake.run">$titlediskdrake</a></span> </p>
+			</li>
+			<li>
+				<p><a href=./apps/kdiskfree.run><img src="images/drive.svg" class="alignleft"/></a>
+				<span><a class="title" href="./apps/kdiskfree.run">$titlekdiskfree</a></span> </p>
+			</li>
+		</ul>
+
+		<div class='cssmenu'>
+
+            <p class="titlePage">$titlepage08</p><div class="linija"></div>
+
+		</div>
+		<!--FINE SUBMENU-->
+
+		<ul id="item-list">
+			<li>
+				<p><a class="title" href=./apps/start-kdethemes.run><img src="images/desktop-theme.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-kdethemes.run>$titlechangethemes</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/install-mauishell.run><img src="images/login.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/install-mauishell.run>$titlemauishell</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/install-lxqt.run><img src="images/compton.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/install-lxqt.run>$titlelxqt</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-kdeicons.run><img src="images/desktop-icons.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-kdeicons.run>$titlechangeicons</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/install-gnomeshell.run><img src="images/colorgrab.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/install-gnomeshell.run>$titlegnomeshell</a></span></p>
+			</li>
+			<li>
+				<p><a class="title" href=./apps/start-fonts.run><img src="images/fonts.svg" class="alignleft"/></a>
+				<span><a class="title" href=./apps/start-fonts.run>$titledrakfont</a></span></p>
+			</li>
+		</ul>
+</div>
+</body>
+
+  <script>
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener("selectstart", function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener("copy", function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener("dragstart", function(e) {
+      e.preventDefault();
+    });
+  </script>
+
+EOF
+</html>
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /usr/share/ob-control-center
+exec openbosniana-welcome -s 1020x600 -i ob-cc -t $"OB Control Center" index.sh.htm

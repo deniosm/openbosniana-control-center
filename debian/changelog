@@ -1,6 +1,14 @@
-base-files (13.1) testing; urgency=medium
+openbosniana-control-center (2024.12.13) OpenBosniana; urgency=medium
 
-  * Initial Release.
-  * Initial Version.
+  * Add apps/*
+  * Update index*
+  * Add icons
+  * Update po
 
- -- Denis Maslo <denios-linux@proton.me>  Mon, 14 Dec 2022 04:07:50 +0100
+ -- Denis Maslo <deni@bosniana.org>  Fri, 13 Dec 2024 12:25:11 +0200
+
+openbosniana-control-center (2024.10.13) OpenBosniana; urgency=medium
+
+  * initial release
+
+ -- Denis Maslo <deni@bosniana.org>  Thu, 25 May 2023 16:11:37 +0200

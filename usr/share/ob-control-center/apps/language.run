@@ -1,0 +1,4 @@
+#!/bin/sh
+. /usr/share/openbosniana-welcome/helpers
+kcmshell kcm_regionandlang
+

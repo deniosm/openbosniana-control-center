@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# Translators:
+# Deni <deni@bosniana.org>, 2024
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-11 17:26+0100\n"
+"PO-Revision-Date: 2019-06-23 23:25+0000\n"
+"Last-Translator: Deni <deni@bosniana.org>, 2024\n"
+"Language-Team: Serbian (https://www.transifex.com/openBosniana/teams/1818/"
+"sr/)\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: usr/share/ob-welcome/translation:8
+msgid "Control Center"
+msgstr "Kontrolni Centar"
+
+#: usr/share/ob-welcome/translation:9
+msgid "About this application"
+msgstr "O ovoj aplikaciji"
+
+#: usr/share/ob-welcome/translation:10
+msgid "SYSTEM"
+msgstr "Sistem"
+
+#: usr/share/ob-welcome/translation:11
+msgid "Update"
+msgstr "Ažuriranja"
+
+#: usr/share/ob-welcome/translation:12
+msgid "Update Settings"
+msgstr "Postavke ažuriranja"
+
+#: usr/share/ob-welcome/translation:13
+msgid "Users and Groups"
+msgstr "Korisnici i grupe"
+
+#: usr/share/ob-welcome/translation:14
+msgid "Date and Time"
+msgstr "Datum i vrijeme"
+
+#: usr/share/ob-welcome/translation:15
+msgid "Networks"
+msgstr "Mreže"
+
+#: usr/share/ob-welcome/translation:16
+msgid "Backup"
+msgstr "Sigurnosna kopija"
+
+#: usr/share/ob-welcome/translation:17
+msgid "HARDWARE"
+msgstr "Hardver"
+
+#: usr/share/ob-welcome/translation:18
+msgid "Monitor"
+msgstr "Monitor"
+
+#: usr/share/ob-welcome/translation:19
+msgid "Printer"
+msgstr "Štampač"
+
+#: usr/share/ob-welcome/translation:20
+msgid "Bluetooth"
+msgstr ""
+
+#: usr/share/ob-welcome/translation:21
+msgid "Audio"
+msgstr "Zvuk"
+
+#: usr/share/ob-welcome/translation:22
+msgid "Keyboard"
+msgstr "Tastatura"
+
+#: usr/share/ob-welcome/translation:23
+msgid "Touchpad"
+msgstr ""
+
+#: usr/share/ob-welcome/translation:24
+msgid "Local Drives"
+msgstr "Lokalni diskovi"
+
+#: usr/share/ob-welcome/translation:25
+msgid "Storage Devices"
+msgstr "Pohrana"
+
+#: usr/share/ob-welcome/translation:26
+msgid "DESKTOP"
+msgstr "Desktop"
+
+#: usr/share/ob-welcome/translation:27
+msgid "Themes"
+msgstr "Teme"
+
+#: usr/share/ob-welcome/translation:28
+msgid "Login Screen"
+msgstr "Ekran za prijavu"
+
+#: usr/share/ob-welcome/translation:29
+msgid "Compositor"
+msgstr "Kompozitor"
+
+#: usr/share/ob-welcome/translation:30
+msgid "Icons"
+msgstr "Ikone"
+
+#: usr/share/ob-welcome/translation:31
+msgid "Colors"
+msgstr "Boje"
+
+#: usr/share/ob-welcome/translation:32
+msgid "Fonts"
+msgstr "Fontovi"
+
+#: usr/share/ob-welcome/translation:33
+msgid "Language"
+msgstr "Jezik"
+
+#: usr/share/ob-welcome/translation:34
+msgid "About This System"
+msgstr "O sistemu"
+
+#: usr/share/ob-welcome/translation:35
+msgid "CPU Information"
+msgstr "CPU informacije"
+
+#: usr/share/ob-welcome/translation:36
+msgid "PCI information"
+msgstr "PCI informacije"
+
+#: usr/share/ob-welcome/translation:37
+msgid "Device Viewer"
+msgstr "Uređaji"
+
+#: usr/share/ob-welcome/translation:38
+msgid "This software is licensed under the GNU General Public License version 2 (GPLv2)."
+msgstr "Ovaj softver je licenciran pod GNU Općom javnom licencom verzija 2 (GPLv2)."
+
+#: usr/share/ob-welcome/translation:39
+msgid "It uses Qt6 WebEngine and openbosniana-welcome."
+msgstr "Koristi Qt6 WebEngine i openbosniana-welcome."
+
+#: usr/share/ob-welcome/translation:40
+msgid "For bugs, suggestions and improvements, please head to "
+msgstr "Za pogreške, prijedloge i poboljšanja idite na "
+
+#: usr/share/ob-welcome/translation:46
+msgid "Control Center"
+msgstr "Kontrolni Centar"
+
+#: usr/share/ob-welcome/translation:47
+msgid "About this application"
+msgstr "O ovoj aplikaciji"
+
+#: usr/share/ob-welcome/translation:48
+msgid "SYSTEM"
+msgstr "Sistem"
+
+#: usr/share/ob-welcome/translation:49
+msgid "Update"
+msgstr "Ažuriranja"
+
+#: usr/share/ob-welcome/translation:50
+msgid "Update Settings"
+msgstr "Postavke ažuriranja"
+
+#: usr/share/ob-welcome/translation:51
+msgid "Users and Groups"
+msgstr "Korisnici i grupe"
+
+#: usr/share/ob-welcome/translation:52
+msgid "Date and Time"
+msgstr "Datum i vrijeme"
+
+#: usr/share/ob-welcome/translation:53
+msgid "Networks"
+msgstr "Mreže"
+
+#: usr/share/ob-welcome/translation:54
+msgid "Backup"
+msgstr "Sigurnosna kopija"
+
+#: usr/share/ob-welcome/translation:55
+msgid "HARDWARE"
+msgstr "Hardver"
+
+#: usr/share/ob-welcome/translation:56
+msgid "Monitor"
+msgstr "Monitor"
+
+#: usr/share/ob-welcome/translation:57
+msgid "Printer"
+msgstr "Štampač"
+
+#: usr/share/ob-welcome/translation:58
+msgid "Bluetooth"
+msgstr ""
+
+#: usr/share/ob-welcome/translation:59
+msgid "Audio"
+msgstr "Zvuk"
+
+#: usr/share/ob-welcome/translation:60
+msgid "Keyboard"
+msgstr "Tastatura"
+
+#: usr/share/ob-welcome/translation:61
+msgid "Touchpad"
+msgstr ""
+
+#: usr/share/ob-welcome/translation:62
+msgid "Local Drives"
+msgstr "Lokalni diskovi"
+
+#: usr/share/ob-welcome/translation:63
+msgid "Storage Devices"
+msgstr "Pohrana"
+
+#: usr/share/ob-welcome/translation:64
+msgid "DESKTOP"
+msgstr "Desktop"
+
+#: usr/share/ob-welcome/translation:65
+msgid "Themes"
+msgstr "Teme"
+
+#: usr/share/ob-welcome/translation:66
+msgid "Login Screen"
+msgstr "Ekran za prijavu"
+
+#: usr/share/ob-welcome/translation:67
+msgid "Compositor"
+msgstr "Kompozitor"
+
+#: usr/share/ob-welcome/translation:68
+msgid "Icons"
+msgstr "Ikone"
+
+#: usr/share/ob-welcome/translation:69
+msgid "Colors"
+msgstr "Boje"
+
+#: usr/share/ob-welcome/translation:70
+msgid "Fonts"
+msgstr "Fontovi"
+
+#: usr/share/ob-welcome/translation:71
+msgid "Language"
+msgstr "Jezik"
+
+#: usr/share/ob-welcome/translation:72
+msgid "About This System"
+msgstr "O sistemu"
+
+#: usr/share/ob-welcome/translation:73
+msgid "CPU Information"
+msgstr "CPU informacije"
+
+#: usr/share/ob-welcome/translation:74
+msgid "PCI information"
+msgstr "PCI informacije"
+
+#: usr/share/ob-welcome/translation:75
+msgid "Device Viewer"
+msgstr "Uređaji"
+
+#: usr/share/ob-welcome/translation:76
+msgid "This software is licensed under the GNU General Public License version 2 (GPLv2)."
+msgstr "Ovaj softver je licenciran pod GNU Općom javnom licencom verzija 2 (GPLv2)."
+
+#: usr/share/ob-welcome/translation:77
+msgid "It uses Qt6 WebEngine and openbosniana-welcome."
+msgstr "Koristi Qt6 WebEngine i openbosniana-welcome."
+
+#: usr/share/ob-welcome/translation:78
+msgid "For bugs, suggestions and improvements, please head to "
+msgstr "Za pogreške, prijedloge i poboljšanja idite na "
+
+
+
+
+
+
+
+
+
+
+
+
+
+

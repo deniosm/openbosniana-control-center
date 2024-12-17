@@ -1,0 +1,2 @@
+#!/bin/sh
+konsole -e sh -c "pkexec apt clean; pkexec apt update; pkexec apt full-upgrade -y; echo 'Press enter to close konsole'; read"
