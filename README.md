@@ -5,7 +5,7 @@ requires the following dependencies:
 
 - ob-welcome
 
-- 
+- openbosniana-welcome
 ##### Installing Dependencies
 to install ob-welcome, we can use apt:
 ```sh

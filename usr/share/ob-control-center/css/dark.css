@@ -1,210 +1,242 @@
-* {
-margin:0;
-padding:0;
+@import url('fonts.css');
+*,:after,:before{
+  box-sizing:inherit;
+  margin:0;
+  padding:0;
 }
-
-body {
-background-color: #404552;
-font-family:'Noto Sans', sans-serif;
-font-size: 10pt;
+h1 {
+  font-weight: normal;
+  cursor:default;
 }
-.left{
-position:fixed;
-display:block;
-top:0;
-left:0;
-height:100%;
-width:16%;
-background:rgb(0,0,0,0.1)
-}
-.right{ padding-top:10px;
- margin-left:16%;
- display:block
-}
-.linija{
-    height:1px;
-    background: #888A85;
-    margin-left:20px;
-    width:30%;
-    margin-bottom:10px;
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+  font-size:1.15em;
+  cursor:default;
 }
 a {
- color:#F3F3F3;
- font-style:normal;
- text-decoration:none;
-}
-
-a:hover {
-  text-decoration:none;
+  color: inherit;
   cursor:default;
-  color:#59afffff!important;
-  transition: color 0.3s ease;
+}
+.button {
+  appearance: none;
+  border-radius: 0.25em;
+  color: inherit;
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 0.5em 1em;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 100ms ease-in;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor:default;
+}
+.button:hover {
+  background-color: rgba(150, 150, 150, 0.125);
+  text-decoration: none;
+  cursor:default;
 }
 
-#item-list {
- position:relative;
- list-style-type:none;
- text-align:left;
- float:left;
- padding:0;
- width:100%;
- margin-bottom:25px;
+.home h1 {
+  color: var(--accent);
+  font-family: "Nunito", sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  cursor:default;
+}
+.home.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 111px);
+  margin: 0 1em;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 95vw;
+  cursor:default;
+}
+.home.apps .app {
+  box-shadow: 0px 6px 24px 0px transparent, inset 0px 0px 0px 1px transparent,
+    inset 0px 1px 0px 1px rgba(255, 255, 255, 0);
+  font-weight: normal;
+  margin: 0.5em 0;
+  padding: 1em 0.5em;
+  text-align: left;
+  transition: all 200ms ease;
+  vertical-align: top;
+  width: 111px;
+  cursor:default;
+}
+.home.apps .app:hover,
+.home.apps .app:focus {
+  cursor:default;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.125)
+  );
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 0px 1px rgba(255, 255, 255, 0.25);
+}
+.home.apps .app img {
+  display: block;
+  height: 40px;
+  margin: 0 auto 0.5em;
+  width: 40px;
+  cursor:default;
+}
+.home.apps .app .title {
+  display: block;
+  text-align: center;
+  cursor:default;
+}
+.home.apps .app .summary {
+  display: none;
+  cursor:default;
 }
 
-#item-list li {
- display:inline-block;
- width:210px;
- vertical-align:top;
- overflow:hidden;
- margin: 5px 0 0 20px;
+.home .action {
+  text-align: center;
+  cursor:default;
 }
-#item-list li a {
- padding:1px;
+:root {
+  color-scheme: light dark;
+  --bg: #333333;
+  --fg:  white;
+  --accent: #109dc0;
 }
-
-#item-list li img {
- display:inline-block;
- vertical-align:top;
- width:30px;
- margin-right:.5em;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #333333;
+    --fg: white;
+    --accent: #109dc0;
+  }
 }
-
-#item-list li p {
-display:inline-block;
-min-width:200px;
-margin:0;
-padding:5px;
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  cursor:default;
 }
-#item-list .title {
- font-size:15px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  cursor:default;
 }
-
-.titlePage {
-color:#59afffff!important;
-margin-bottom:10px;
-font-size:1.2em;
-text-transform: uppercase;
-text-align:start;
-margin-left:20px
+.constrain {
+  max-width: 800px;
+  margin:0 1em;
+  cursor:default;
 }
-
-#nav {
-cursor:default;
-padding:30px 0 0 0;
+.main {
+  padding: 0.5em;
+  cursor:default;
 }
-
-#nav li a {
-color:#F3F3F3!important;
-display:block;
-text-decoration:none;
-outline:0;
-margin: 0 10px;
-padding:5px;
-cursor:default;
-font-size:13px;
+.linediv{
+  height:1px;
+  background-color:rgba(255, 255, 255, 0.25);
+  margin: 0 1em 0 1em
 }
-
-#nav li a:hover {
-  color:#59afffff!important;
-  transition: color 0.3s ease;
+#preview-overlay {
+  position: fixed;
+  top: 100px;
+  left: 40px;
+  transform: translateX(-10%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
-
-
-#cssmenu ul {
-list-style-type:none;
-width:auto;
-position:center;
-height:33px;
-margin-left:auto;
-margin-right:auto;
-margin-top:0;
-display:table;
-padding:0;
+#preview-overlay1 {
+  position: fixed;
+  top: 100px;
+  left: 150px;
+  transform: translateX(-10%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
-
-#cssmenu sysconf {
-list-style-type:none;
-position:start;
-height:33px;
-margin-left:auto;
-margin-right:auto;
-margin-top:0;
-padding:0;
+#preview-overlay2 {
+  position: fixed;
+  top: 100px;
+  left: 260px;
+  transform: translateX(-20%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
-
-
-#cssmenu li {
-display:block;
-float:left;
-margin:0;
-padding:0;
+#preview-overlay3 {
+  position: fixed;
+  top: 100px;
+  left: 370px;
+  transform: translateX(-30%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
-
-#cssmenu li a {
-float:left;
-color:#262627;
-text-decoration:none;
-height:24px;
-padding:9px 15px 0;
+#preview-overlay4 {
+  position: fixed;
+  top: 100px;
+  left: 480px;
+  transform: translateX(-40%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
-
-
-.wrapper {
-text-align:center;
-min-width:820px;
-min-height:400px;
-padding:10px 10px 10px 10px;
-margin-top:-10px;
-}
-
-.wrapper p {
-text-align:left;
-}
-
-.container {
-display:block;
-}
-
-.container li p {
-  padding:10px 15px;
-  font-size:15px;
-  margin: 0 8px 0 8px
-}
-
-.row {
-margin-top:-120px;
-}
-
-#nav ul li {
-width:100%
-}
-
-#nav li,img.alignleft {
-float:left;
-}
-.logo {
-float:right;
-padding-left:10px;
-margin:30px 30px 0 0;
-
-}
-.articles {
-text-align:left;
-padding:0;
-}
-
-.articles h1 {
-margin-top:.35em;
-}
-
-.articles p {
-font-family:"Noto Sans", Sans;
-/*font-size:.95em;*/
-line-height:1.4em;
-text-align:justify;
-text-justify:newspaper;
-}
-
-.blue{
- color:#59afffff!important;
+#preview-overlay5 {
+  position: fixed;
+  top: 100px;
+  left: 590px;
+  transform: translateX(-50%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
