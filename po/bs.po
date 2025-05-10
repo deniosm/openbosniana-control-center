@@ -154,3 +154,11 @@ msgstr "Koristi Qt6 WebEngine i openbosniana-welcome."
 #: usr/share/ob-welcome/translation:40
 msgid "For bugs, suggestions and improvements, please head to "
 msgstr "Za pogreške, prijedloge i poboljšanja idite na "
+
+#: usr/share/ob-welcome/translation:41
+msgid "Appearance"
+msgstr "Prilagodba izgleda"
+
+#: usr/share/ob-welcome/translation:42
+msgid "Default Start Menu"
+msgstr "Zadani izbornik aplikacija"

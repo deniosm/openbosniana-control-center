@@ -1,4 +1,13 @@
-openbosniana-control-center (2024.12.13) OpenBosniana; urgency=medium
+openbosniana-control-center (2025.05.08) OpenBosniana; urgency=medium
+
+  * Add Menu11
+  * Fix apps/*.run
+  * Update themes
+  * Fix pk
+
+ -- Denis Maslo <deni@bosniana.org>  Thu, 08 May 2025 04:03:16 +0200
+
+openbosniana-control-center (2024.12.15) OpenBosniana; urgency=medium
 
   * Add apps/*
   * Update index*

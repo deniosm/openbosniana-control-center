@@ -148,3 +148,11 @@ msgstr ""
 #: usr/share/ob-welcome/translation:40
 msgid "For bugs, suggestions and improvements, please head to "
 msgstr ""
+
+#: usr/share/ob-welcome/translation:41
+msgid "Appearance"
+msgstr ""
+
+#: usr/share/ob-welcome/translation:42
+msgid "Default Start Menu"
+msgstr ""

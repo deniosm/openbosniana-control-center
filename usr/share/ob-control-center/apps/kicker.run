@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Use pkexec to copy files and check if it was successful
+if ! pkexec cp -r /usr/share/ob-welcome/start-menu/kicker/layout-templates/* /usr/share/plasma/layout-templates/; then
+    kdialog --error "Enter the password to continue."
+    exit 1
+fi
+
+# Check if the package file exists
+if [ ! -f ~/.config/kdedefaults/package ]; then
+    kdialog --error "File package not found!"
+    exit 1
+fi
+
+# Read the KCM module from the package file
+KCM_MODULE=$(cat ~/.config/kdedefaults/package)
+
+# Apply the Look and Feel theme
+lookandfeeltool -a "$KCM_MODULE" --resetLayout
+
+kdialog --title "OpenBosniana StartMenu" --msgbox "Kicker set"

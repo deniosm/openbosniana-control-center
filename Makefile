@@ -1,6 +1,6 @@
 NAME=ob-control-center
 VERSION=0.1.3
-TRANSLATIONS=bs hr
+TRANSLATIONS=bs hr sr
 bindir=/usr/bin
 sysconfdir=/etc
 sharedir=/usr/share

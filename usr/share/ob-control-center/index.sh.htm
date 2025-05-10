@@ -1,6 +1,6 @@
 #!/bin/bash
 source translation
-source ~/.ob-control-center
+source ~/.ob-welcome
 source /etc/os-release
 GLOBALS_FILE=~/.config/kdedefaults/kdeglobals
 
@@ -13,174 +13,261 @@ if [[ -f "$GLOBALS_FILE" ]]; then
         CSS_FILE="css/dark.css"
     fi
 fi
-
 #Translation
 export TEXTDOMAINDIR="/usr/share/locale"
-export TEXTDOMAIN=ob-control-center
+export TEXTDOMAIN=ob-welcome
 
-cat << EOF
+[ -z "$USER" ] && USER="$(id -nu)"
+REALNAME="$(getent passwd $USER |cut -d: -f5)"
+[ -z "$REALNAME" ] && REALNAME="$USER"
+
+sed \
+	-e "s|%1|<span class=\"username\">$REALNAME</span>|g" \
+	-e "s|%2|${NAME} ${VERSION}|g" \
+	-e "s|%3|$(uname -r | cut -d"-" -f1) $(uname -r | cut -d"-" -f2)|g" \
+	<< EOF
 <html>
 
 	<head>
-		<title>$title</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-            <link rel="stylesheet" href="$CSS_FILE" />
-
+	<title>$title</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="css/block.js"></script>
+        <script src="css/preview.js"></script>
 	</head>
 <body>
+
+<div class="home main constrain">
+
+  <h2>$prilagodbaizgleda</h2>
+
+</div>
+
+<div class="home apps">
+  
+    
+    <a class="app button flatpak" href=apps/start-kdethemes.run>
+      <img 
+            srcset="images/desktop-theme.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlechangethemes</span>
+    </a>
+
+
+  
+    
+    <a class="app button flatpak" href=apps/install-mauishell.run>
+      <img 
+            srcset="images/login.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlemauishell</span>
+    </a>
+
+
+    
+    <a class="app button flatpak" href=apps/install-lxqt.run>
+      <img
+          
+            srcset="images/compton.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlelxqt</span>
+    </a>
+
+  
+    
+    <a class="app button flatpak" href=apps/start-kdeicons.run>
+      <img
+            srcset="images/desktop-icons.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlechangeicons</span>
+    </a>
+
+    <a class="app button flatpak" href=apps/install-gnomeshell.run>
+      <img 
+            srcset="images/colorgrab.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="Agenda icon" />
+
+      <span class="title">$titlegnomeshell</span>
+    </a>
+    
+    <a class="app button flatpak" href=apps/start-fonts.run>
+      <img 
+            srcset="images/fonts.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="Agenda icon" />
+
+      <span class="title">$titledrakfont</span>
+    </a>
+
+
+</div>
+
+<div class="bg-1">
+<div class="home main constrain">
+
+  <h2>$izbornikaplikacija (root)</h2>
+
+</div>
+<div class="home apps">
+    <a class="app button flatpak" href=apps/menu11.run data-preview="images/menu/menu11.png">
+      <img 
+            srcset="images/menu11.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Menu11</span>
+    </a>
+    <a class="app button flatpak" href=apps/menu11center.run data-preview="images/menu/menu11center.png">
+      <img 
+            srcset="images/menu11center.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Menu11 Center</span>
+    </a>
+    <a class="app button flatpak" href=apps/kicker.run data-preview="images/menu/kicker.png">
+      <img 
+            srcset="images/kicker.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Kicker</span>
+    </a>
+
+    <a class="app button flatpak" href=apps/kickoff.run data-preview="images/menu/kickoff.png">
+      <img 
+            srcset="images/kickoff.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Kickoff</span>
+    </a>
+
+    <a class="app button flatpak" href=apps/simplemenu.run data-preview="images/menu/simple.png">
+      <img 
+  
+            srcset="images/simple.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Simple Menu</span>
+    </a>
+    
+    <a class="app button flatpak" href=apps/kickerdash.run data-preview="images/menu/dash.png">
+      <img
+        
+            srcset="images/dash.png"
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">Dash</span>
+    </a>
+</div>
+</div>
+<div class="home main constrain">
+
+  <h2>Brze postavke</h2>
+
+</div>
+
+<div class="home apps">
+    <a class="app button flatpak" href=apps/start-xfdrake.run>
+      <img
+            srcset="images/monitor.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlexfdrake</span>
+    </a>  
+    <a class="app button flatpak" href=apps/start-drakconnect.run>
+      <img 
+            srcset="images/network.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titleconfiglan</span>
+    </a>
+    <a class="app button flatpak" href=apps/start-audio.run>
+      <img
+            srcset="images/sound.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titleaudio</span>
+    </a>
+    <a class="app button flatpak" href=apps/start-clock.run>
+      <img
+            srcset="images/clock.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titledrakclock</span>
+    </a>
+    <a class="app button flatpak" href=apps/language.run>
+      <img     
+            srcset="images/language.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlelanguage</span>
+    </a>
+    <a class="app button flatpak" href=apps/start-keyboard.run>
+      <img 
+            srcset="images/keyboard.png"
+          
+        
+        src="images/application-default-icon.svg"
+      alt="" />
+
+      <span class="title">$titlekeyboard</span>
+    </a>  
+</div>
+
 EOF
+
 cat << EOF
-<div class="left">
-	<nav id="nav">
-		<ul class="container">
-			<li><a href="##">$title</a></li>
-            <div class="menulinija"></div>
-			<li><a href=./apps/aboutsys.run>$aboutsys</a></li>
-			<li><a href=./apps/cpu.run>$cpuinfo</a></li>
-			<li><a href=./apps/pci.run>$pciinfo</a></li>
-			<li><a href=./apps/devinfo.run>$devinfo</a></li>
-            <div class="menulinija"></div>
-			<li><a href="about.sh.htm">$descabout</a></li>
-		</ul>
-	</nav>
-</div>
-<div class="right">
-		<div class='cssmenu'>
-
-            <p class="titlePage">$titlepage04</p><div class="linija"></div>
-
-		</div>
-
-		<!--FINE SUBMENU-->
-		<ul id="item-list">
-			<li>
-				<p><a class="title" target="hidden" href=./apps/updatesys.run><img src="images/system-update.svg" class="alignleft"/></a>
-				<span><a class="title" target="hidden" href=./apps/updatesys.run>$titleupdatesys</a></span></p>
-			</li>
-			<li>
-				<p><a href=./apps/ob-update-config.run><img src="images/update-config.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/ob-update-config.run>$updatesettigs</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/drakuser.run><img src="images/users.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/drakuser.run>$titledrakuser</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-clock.run><img src="images/clock.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-clock.run>$titledrakclock</a></span></p>
-			</li>
-			<li>
-				<p><a target="hidden" href=./apps/start-drakconnect.run><img src="images/network.svg" class="alignleft"/></a>
-				<span><a class="title" target="hidden" href="./apps/start-drakconnect.run">$titleconfiglan </a></span> </p>
-		    </li>
-			<li>
-				<p><a class="title" href=./apps/kbackup.run><img src="images/system-backup.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/kbackup.run>$titlekbackup</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/language.run><img src="images/language.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/language.run>$titlelanguage</a></span></p>
-			</li>
-		</ul>
-
-
-
-		<div class='cssmenu'>
-
-            <p class="titlePage">$titlepage05</p><div class="linija"></div>
-
-
-
-		</div>
-		<!--FINE SUBMENU-->
-
-		<ul id="item-list">
-			<li>
-				<p><a class="title" href=./apps/start-xfdrake.run><img src="images/monitor.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-xfdrake.run>$titlexfdrake</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-printmanager.run><img src="images/printer.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-printmanager.run>$titleconfigprint</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/bluetooth.run><img src="images/bluetooth.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/bluetooth.run>$titlebluetooth</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-audio.run><img src="images/sound.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-audio.run>$titleaudio</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-keyboard.run><img src="images/keyboard.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-keyboard.run>$titlekeyboard</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-touchpad.run><img src="images/touchpad.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-touchpad.run>$titletouchpad</a></span></p>
-			</li>
-			<li>
-				<p><a href=./apps/diskdrake.run><img src="images/drive-partition.svg" class="alignleft"/></a>
-				<span><a class="title" href="./apps/diskdrake.run">$titlediskdrake</a></span> </p>
-			</li>
-			<li>
-				<p><a href=./apps/kdiskfree.run><img src="images/drive.svg" class="alignleft"/></a>
-				<span><a class="title" href="./apps/kdiskfree.run">$titlekdiskfree</a></span> </p>
-			</li>
-		</ul>
-
-		<div class='cssmenu'>
-
-            <p class="titlePage">$titlepage08</p><div class="linija"></div>
-
-		</div>
-		<!--FINE SUBMENU-->
-
-		<ul id="item-list">
-			<li>
-				<p><a class="title" href=./apps/start-kdethemes.run><img src="images/desktop-theme.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-kdethemes.run>$titlechangethemes</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/install-mauishell.run><img src="images/login.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/install-mauishell.run>$titlemauishell</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/install-lxqt.run><img src="images/compton.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/install-lxqt.run>$titlelxqt</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-kdeicons.run><img src="images/desktop-icons.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-kdeicons.run>$titlechangeicons</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/install-gnomeshell.run><img src="images/colorgrab.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/install-gnomeshell.run>$titlegnomeshell</a></span></p>
-			</li>
-			<li>
-				<p><a class="title" href=./apps/start-fonts.run><img src="images/fonts.svg" class="alignleft"/></a>
-				<span><a class="title" href=./apps/start-fonts.run>$titledrakfont</a></span></p>
-			</li>
-		</ul>
-</div>
 </body>
-
-  <script>
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-    });
-    document.addEventListener("selectstart", function(e) {
-      e.preventDefault();
-    });
-    document.addEventListener("copy", function(e) {
-      e.preventDefault();
-    });
-    document.addEventListener("dragstart", function(e) {
-      e.preventDefault();
-    });
-  </script>
-
-EOF
 </html>
-
+EOF

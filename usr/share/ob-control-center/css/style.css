@@ -1,206 +1,157 @@
-* {
-margin:0;
-padding:0;
+@import url('fonts.css');
+*,:after,:before{
+  box-sizing:inherit;
+  margin:0;
+  padding:0;
 }
-
-body {
-background-color: #fff;
-font-family:'Noto Sans', sans-serif;
-font-size: 10pt;
+h1 {
+  font-weight: normal;
+  cursor:default;
 }
-.left{
-position:fixed;
-display:block;
-top:0;
-left:0;
-height:100%;
-width:16%;
-background:#F3F3F3
-}
-.right{
- margin-left:16%;
- padding-top:10px;
- display:block
-}
-.linija{
-    height:1px;
-    background: #888A85;
-    margin-left:20px;
-    width:30%;
-    margin-bottom:10px;
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+  font-size:1.2em;
+  cursor:default;
 }
 a {
-color:#202020;
-font-style:normal;
-text-decoration:none;
+  color: inherit;
+  cursor:default;
+}
+.button {
+  appearance: none;
+  border-radius: 0.25em;
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.5em 1em;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 100ms ease-in;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor:default;
+}
+.button:hover {
+  background-color: rgba(150, 150, 150, 0.125);
+  text-decoration: none;
+  cursor:default;
 }
 
-a:hover {
-text-decoration:none;
+.home h1 {
+  color: var(--accent);
+  font-family: "Nunito", "Open Sans", "Droid Sans", sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  cursor:default;
 }
-#item-list {
- position:relative;
- list-style-type:none;
- text-align:left;
- float:left;
- padding:0;
- width:100%;
- margin-bottom:25px;
+.home.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 111px);
+  margin: 0 1em;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 95vw;
+  cursor:default;
 }
-
-#item-list li {
- display:inline-block;
- width:210px;
- vertical-align:top;
- overflow:hidden;
- margin: 5px 0 0 20px;
+.home.apps .app {
+  box-shadow: 0px 6px 24px 0px transparent, inset 0px 0px 0px 1px transparent,
+    inset 0px 1px 0px 1px rgba(255, 255, 255, 0);
+  font-weight: normal;
+  margin: 0.5em 0;
+  padding: 1em 0.5em;
+  text-align: left;
+  transition: all 200ms ease;
+  vertical-align: top;
+  width: 111px;
+  cursor:default;
 }
-#item-list li a {
- padding:1px;
+.home.apps .app:hover,
+.home.apps .app:focus {
+  cursor:default;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.125)
+  );
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 0px 1px rgba(255, 255, 255, 0.25);
 }
-
-#item-list li img {
- display:inline-block;
- vertical-align:top;
- width:30px;
- margin-right:.5em;
+.home.apps .app img {
+  display: block;
+  height: 40px;
+  margin: 0 auto 0.5em;
+  width: 40px;
+  cursor:default;
 }
-
-#item-list li p {
-display:inline-block;
-min-width:200px;
-margin:0;
-padding:5px;
+.home.apps .app .title {
+  display: block;
+  text-align: center;
+  cursor:default;
 }
-#item-list .title {
- font-size:15px;
-}
-
-.titlePage {
-color:#59afffff!important;
-margin-bottom:10px;
-font-size:1.2em;
-text-transform: uppercase;
-text-align:start;
-margin-left:20px
-}
-
-#nav {
-cursor:default;
-padding:30px 0 0 0;
-}
-
-#nav li a {
-color:#888A85!important;
-display:block;
-text-decoration:none;
-outline:0;
-margin: 0 10px;
-padding:5px;
-cursor:default;
-font-size:13px;
+.home.apps .app .summary {
+  display: none;
+  cursor:default;
 }
 
-#nav li a:hover {
-  color:#59afffff!important;
-  transition: color 0.3s ease;
+.home .action {
+  text-align: center;
+  cursor:default;
 }
-
-
-#cssmenu ul {
-list-style-type:none;
-width:auto;
-position:center;
-height:33px;
-margin-left:auto;
-margin-right:auto;
-margin-top:0;
-display:table;
-padding:0;
+:root {
+  color-scheme: light dark;
+  --bg: white;
+  --fg: #333;
+  --accent: #7239b3;
 }
-
-#cssmenu sysconf {
-list-style-type:none;
-position:start;
-height:33px;
-margin-left:auto;
-margin-right:auto;
-margin-top:0;
-padding:0;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --fg: white;
+    --accent: #a56de2;
+  }
 }
-
-
-#cssmenu li {
-display:block;
-float:left;
-margin:0;
-padding:0;
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", "Open Sans", "Droid Sans", sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  cursor:default;
 }
-
-#cssmenu li a {
-float:left;
-color:#262627;
-text-decoration:none;
-height:24px;
-padding:9px 15px 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  cursor:default;
 }
-
-
-.wrapper {
-text-align:center;
-min-width:820px;
-min-height:400px;
-padding:10px 10px 10px 10px;
-margin-top:-10px;
+.constrain {
+  max-width: 800px;
+  margin:0 1em;
+  cursor:default;
 }
-
-.wrapper p {
-text-align:left;
+.main {
+  padding: 0.5em;
+  cursor:default;
 }
-
-.container {
-display:block;
-}
-
-.container li p {
-  padding:10px 15px;
-  font-size:15px;
-  margin: 0 8px 0 8px
-}
-
-.row {
-margin-top:-120px;
-}
-
-#nav ul li {
-width:100%
-}
-
-#nav li,img.alignleft {
-float:left;
-}
-.logo {
-float:right;
-padding-left:10px;
-margin:30px 30px 0 0;
-
-}
-.articles {
-text-align:left;
-padding:0;
-}
-
-.articles h1 {
-margin-top:.35em;
-}
-
-.articles p {
-font-family:"Noto Sans", Sans;
-/*font-size:.95em;*/
-line-height:1.4em;
-text-align:justify;
-text-justify:newspaper;
-}
-.blue{
- color:#59afffff!important;
+#preview-overlay {
+  position: fixed;
+  top: 280px;
+  left: 1%;
+  transform: translateX(-1%);
+  width: 340px;
+  height: 340px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor:default;
 }
